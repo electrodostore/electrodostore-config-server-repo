@@ -1,5 +1,5 @@
 spring:
-  cinfig:
+  config:
     import: database-config.yml
 
   application:
