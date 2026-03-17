@@ -1,4 +1,7 @@
 spring:
+  cinfig:
+    import: database-config.yml
+
   application:
     name: venta-service
 
@@ -8,18 +11,6 @@ spring:
         hc5:
           enabled: true
 
-  datasource:
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
-    url: ${DB_URL}
-
-  jpa:
-    hibernate:
-      ddl-auto: update
-
-    database-platform: org.hibernate.dialect.MySQLDialect
-
-    open-in-view: false
 
 resilience4j:
   circuitbreaker:
