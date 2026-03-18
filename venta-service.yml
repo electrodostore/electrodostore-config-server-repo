@@ -1,7 +1,9 @@
 spring:
   config:
-    import: database-config.yml
-
+    import: 
+      - database-config.yml
+      - eureka-client-config.yml
+ 
   application:
     name: venta-service
 
@@ -40,11 +42,6 @@ resilience4j:
           - feign.FeignException.NotFound
           - com.electrodostore.venta_service.exception.ClienteNotFoundException
 
-
-eureka:
-  client:
-    service-url:
-      defaultZone: ${EUREKA_URL}
 
 server:
   port: ${PORT:9191}

@@ -1,6 +1,8 @@
 spring:
   config:
-    import: database-config.yml
+    import: 
+      - database-config.yml
+      - eureka-client-config.yml
 
   application:
     name: carrito-service
@@ -35,11 +37,6 @@ resilience4j:
           - com.electrodostore.carrito_service.exception.ProductoNotFoundException
           - com.electrodostore.carrito_service.exception.ProductoStockInsuficienteException
           - com.electrodostore.carrito_service.exception.ClienteNotFoundException
-
-eureka:
-  client:
-    service-url:
-      defaultZone: ${EUREKA_URL}
 
 server:
   port: ${PORT:8282}
