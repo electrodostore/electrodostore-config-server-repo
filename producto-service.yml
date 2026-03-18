@@ -1,14 +1,11 @@
 spring:
   config:
-    import: database-config.yml
+    import: 
+      - database-config.yml
+      - eureka-client-config.yml
 
   application:
     name: producto-service
-
-eureka:
-  client:
-    service-url:
-      defaultZone: ${EUREKA_URL}
 
 server:
   port: ${PORT:8181}
