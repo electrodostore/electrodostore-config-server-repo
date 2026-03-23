@@ -29,5 +29,12 @@ spring:
           filters:
             - StripPrefix=2
 
+        - id: venta-service
+          uri: lb://venta-service
+          predicates:
+            - path=/api/venta/**
+          filters:
+            - stripPrefix=2
+
 server:
   port: ${PORT:9090}
