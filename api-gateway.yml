@@ -13,7 +13,7 @@ spring:
           predicates:
             - Path=/api/producto/**
           filters:
-            - StripPrefix= 2
+            - StripPrefix=2
 
         - id: cliente-service
           uri: lb://cliente-service
