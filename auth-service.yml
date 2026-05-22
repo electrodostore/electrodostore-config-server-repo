@@ -3,6 +3,10 @@ spring:
     import: 
       - database-config.yml
       - eureka-client-config.yml
+       - circuit-breaker-config.yml
+
+  application:
+    name: auth-service
 
 #Clave privada y pública para firma y validación de JWT
 jwt:

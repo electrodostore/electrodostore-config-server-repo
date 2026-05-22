@@ -3,19 +3,12 @@ spring:
     import: 
       - database-config.yml
       - eureka-client-config.yml
+      - circuit-breaker-config.yml
 
   application:
     name: carrito-service
 
 resilience4j:
-  circuitbreaker:
-    configs:
-      default:
-        slidingWindowSize: 10
-        minimumNumberOfCalls: 5
-        failureRateThreshold: 50
-        waitDurationInOpenState: 30s
-
     instances:
       cliente-service:
         base-config: default
