@@ -1,0 +1,19 @@
+spring:
+  config:
+    import: 
+      - database-config.yml
+      - eureka-client-config.yml
+
+#Clave privada y pública para firma y validación de JWT
+jwt:
+  private:
+    key: classpath:keys/private.pem
+  public:
+    key: classpath:keys/public.pem
+
+  user:
+    generator: ${JWT_USER_GENERATOR}
+
+
+server:
+  port: ${PORT:7474}
