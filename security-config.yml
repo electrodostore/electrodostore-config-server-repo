@@ -1,5 +1,6 @@
   # Ubicación de la clave pública RSA usada por Spring Security
   # para validar la firma de los tokens JWT
+spring:
   security:
     oauth2:
       resourceserver:
