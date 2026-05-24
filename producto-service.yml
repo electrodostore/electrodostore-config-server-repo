@@ -3,6 +3,7 @@ spring:
     import: 
       - database-config.yml
       - eureka-client-config.yml
+      - security-config.yml
 
   application:
     name: producto-service

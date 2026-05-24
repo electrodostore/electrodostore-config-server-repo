@@ -3,7 +3,8 @@ spring:
     import: 
       - database-config.yml
       - eureka-client-config.yml
-       - circuit-breaker-config.yml
+      - circuit-breaker-config.yml
+      - security-config.yml
 
   application:
     name: auth-service
