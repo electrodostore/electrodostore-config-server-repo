@@ -44,5 +44,12 @@ spring:
           filters:
             - StripPrefix=2
 
+        - id: auth-service
+          uri: lb://auth-service
+          predicates:
+              - Path=/api/auth/**
+          filters:
+            - StripPrefix=1
+
 server:
   port: ${PORT:9090}
