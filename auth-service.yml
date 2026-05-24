@@ -8,6 +8,14 @@ spring:
   application:
     name: auth-service
 
+resilience4j:
+  instances:
+    cliente-service:
+      base-config: default
+      ignore-exceptions:
+        - feign.FeignException.NotFound
+        - com.electrodostore.carrito_service.exception.ClienteNotFoundException
+
 #Clave privada y pública para firma y validación de JWT
 jwt:
   private:
