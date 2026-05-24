@@ -5,6 +5,14 @@ spring:
   application:
     name: api-gateway
 
+  # Ubicación de la clave pública RSA usada por Spring Security
+  # para validar la firma de los tokens JWT
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          public-key-location: classpath:keys/public.pem
+
   cloud:
     gateway:
       routes:
