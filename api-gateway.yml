@@ -13,30 +13,30 @@ spring:
         - id: producto-service
           uri: lb://producto-service
           predicates:
-            - Path=/api/producto/**
+            - Path=/api/productos/**
           filters:
-            - StripPrefix=2
+            - StripPrefix=1
 
         - id: cliente-service
           uri: lb://cliente-service
           predicates:
-            - Path=/api/cliente/**
+            - Path=/api/clientes/**
           filters:
-            - StripPrefix=2
+            - StripPrefix=1
 
         - id: carrito-service
           uri: lb://carrito-service
           predicates:
-            - Path=/api/carrito/**
+            - Path=/api/carritos/**
           filters:
-            - StripPrefix=2
+            - StripPrefix=1
 
         - id: venta-service
           uri: lb://venta-service
           predicates:
-            - Path=/api/venta/**
+            - Path=/api/ventas/**
           filters:
-            - StripPrefix=2
+            - StripPrefix=1
 
         - id: auth-service
           uri: lb://auth-service
