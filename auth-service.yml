@@ -9,6 +9,13 @@ spring:
   application:
     name: auth-service
 
+  cloud:
+    openfeign:
+      httpclient:
+        hc5:
+          enabled: true
+
+
 resilience4j:
   instances:
     cliente-service:
