@@ -45,5 +45,26 @@ spring:
           filters:
             - StripPrefix=1
 
+        - id: user-service
+          uri: lb://auth-service
+          predicates:
+            - Path=/api/users/**
+          filters:
+             - StripPrefix=1
+
+        - id: permission-service
+          uri: lb://auth-service
+          predicates:
+            - Path=/api/permissions/**
+          filters:
+            - StripPrefix=1
+
+        - id: role-service
+          uri: lb://auth-service
+          predicates:
+            - Path=/api/roles/**
+          filters:
+            - StripPrefix=1
+
 server:
   port: ${PORT:9090}
